@@ -1,0 +1,90 @@
+div.header {
+    width: 100%;
+    background-color: 322D31;
+    color: 9C949A;
+    height: 70px;
+    border-radius: 10px;
+}
+li.mainmenu {
+    display: inline-block;
+    width: 20%;
+    height: 70px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+#mainmenu {
+    display: inline-block;
+    width: 20%;
+    height: 70px;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.menu {
+    margin-left: 31%;
+    height: 70px;
+}
+li.mainmenu:hover{
+    background-color: black;
+}
+a {
+    text-decoration: none;
+    color: 9C949A;
+}
+a:hover {
+    color: white;
+}
+#now {
+    background-color: black;
+}
+.news {
+    float: left;
+    width: 30%;
+    background-color: E8E2E7;
+    border: 3px solid grey;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.main {
+    margin-left: 31%;
+    border-left: 3px solid grey;
+    border-left: 5px;
+}
+table {
+    font-size: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+h2.name {
+    text-align: center;
+    color: grey;
+}
+th, td {
+    border: 1px solid grey;
+    font-family: monospace;
+    color: grey;
+}
+ol {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    color: grey;
+    border-left: 5px solid grey;
+    border-radius: 10px;
+}
+
+ul {
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: white;
+    color: grey;
+    border-left: 4px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+li {
+    border-bottom: 1px solid grey;
+}
