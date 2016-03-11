@@ -45,20 +45,37 @@
             if(d==0){
                 document.getElementById('d').innerHTML = 'D=0 <br> 1 корінь';
                 x1=(-b)/(2*a);
-                document.getElementById('result1').innerHTML = x1;
+                document.getElementById('result1').innerHTML = 'X1 = ' + x1;
                 document.getElementById('JSPractice').style.color = 'C39300';
             } else if(d<0){
                 document.getElementById('JSPractice').style.color = 'red';
                 document.getElementById('d').innerHTML = 'D<0, <br> коренів немає';
                 document.getElementById('result1').innerHTML = '';
+                document.getElementById('result2').innerHTML = '';
             } else {
             document.getElementById('JSPractice').style.color = 'green';
             x1=(-b+Math.sqrt(d))/(2*a);
             x2=(-b-Math.sqrt(d))/(2*a);                    
-            document.getElementById('result1').innerHTML = x1;
-            document.getElementById('result2').innerHTML = x2;
+            document.getElementById('result1').innerHTML = 'X1 = ' + x1;
+            document.getElementById('result2').innerHTML = 'X2 = ' + x2;
             document.getElementById('d').innerHTML = d;
             }
+        }
+        function myFunctionSumm() {
+            var first = document.getElementById('first').value;
+            var second = document.getElementById('second').value;
+            var SEven = 0;
+            var SOdd = 0;
+                for (var i = parseInt(first); i < (parseInt(second)+1); i++) {
+                    if (first % 2 == 0){
+                        SEven += parseInt(first);
+                    } else {
+                        SOdd += parseInt(first);
+                    }
+                    first++;
+                }
+            document.getElementById('SummEven').innerHTML = 'Сума парних чисел дорівнює  '  + SEven;
+            document.getElementById('SummOdd').innerHTML = 'Сума непарних чисел дорівнює  ' + SOdd;
         }
     </script>
      <div class="news"> 
@@ -74,7 +91,17 @@
     </div>
     <div class="main">
         <div class="JSPractice">
-            <p>Введіть a,b,c у р-ні ax²+bx-c=0</p>
+            <h1>Сума всіх парних і непарних чисел на проміжку</h1>
+            <p>Введіть a і b</p>
+            <input type="text" id="first" placeholder=" a" required /><br>
+            <input type="text" id="second" placeholder=" b" required/><br>
+            <button id="ress" onclick="myFunctionSumm()">Знайти</button>
+            <p id="SummEven"></p>
+            <p id="SummOdd"></p>
+        </div>
+        <div class="JSPractice">
+            <h1>Квадратне р-ня</h1>
+            <p>Введіть a,b,c у р-ні ax²+bx+c=0</p>
             <input type="text" id="a" placeholder=" Введіть a" required /><br>            <input type="text" id="b" placeholder=" Введіть b" required /><br>
             <input type="text" id="c" placeholder=" Введіть c" required /><br>
             <button id="button" onclick="myFunction()"> розв'язати</button>
