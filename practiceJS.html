@@ -5,11 +5,11 @@
     <title>Practice№1</title>
     <div class="header">
        <div class="menu">
-            <li id="mainmenu">
+           <li id="mainmenu">
                 <p class="header">Practice №1</p>
             </li>
             <a href="index.html">
-            <li class="mainmenu">
+            <li  class="mainmenu">
                 <p class="header">Home</p>
             </li>
             </a>
@@ -19,20 +19,49 @@
             </li>
             </a>
             <a href="contact.html">
-            <li id="now" class="mainmenu">
+            <li class="mainmenu">
                 <p class="header">Unnumbered</p>
             </li>
             </a>
            <a href="practiceJS.html">
-            <li  class="mainmenu">
+            <li id="now" class="mainmenu">
                 <p class="header">PracticeJs</p>
             </li>
             </a>
             </div>
     </div>
 </head>
-<body>
-    <div class="news">
+<body> 
+    <script>
+        function myFunction(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var c = document.getElementById('c').value;
+            var d;
+            var x1;
+            var x2;
+            
+            d = b*b - 4*a*c;
+            if(d==0){
+                document.getElementById('d').innerHTML = 'D=0 <br> 1 корінь';
+                x1=(-b)/(2*a);
+                document.getElementById('result1').innerHTML = x1;
+                document.getElementById('JSPractice').style.color = 'C39300';
+            } else if(d<0){
+                document.getElementById('JSPractice').style.color = 'red';
+                document.getElementById('d').innerHTML = 'D<0, <br> коренів немає';
+                document.getElementById('result1').innerHTML = '';
+            } else {
+            document.getElementById('JSPractice').style.color = 'green';
+            x1=(-b+Math.sqrt(d))/(2*a);
+            x2=(-b-Math.sqrt(d))/(2*a);                    
+            document.getElementById('result1').innerHTML = x1;
+            document.getElementById('result2').innerHTML = x2;
+            document.getElementById('d').innerHTML = d;
+            }
+        }
+    </script>
+     <div class="news"> 
         <h3>Рандомна новина з закарпаття</h3>
         <h4>В Закарпатті вже зацвіли червонокнижні рослини - помилуватись можуть всі охочі </h4>
         Помилуватись унікальною Долиною Нарцисів уже можуть всі охочі.
@@ -44,19 +73,17 @@
         Підсніжники і шафрани занесені до Червоної книги України і за їхнє знищення передбачена адміністративна відповідальність у вигляді штрафу, розміром від     1700 до 3655 гривень.
     </div>
     <div class="main">
-        <h2 class="name"> Ненумерований список студентів 6-ї групи</h2>
-        <ul>
-            <li>Гапієнко</li>
-            <li>Дребітко</li>
-            <li>Дудого</li>
-            <li>Піган</li>
-            <li>Лазорик</li>
-            <li>Нейдел</li>
-            <li>Реблян</li>
-            <li>Федорів</li>
-            <li>Шастун</li>
-            <li>Швець</li>
-    </ul>
+        <div class="JSPractice">
+            <p>Введіть a,b,c у р-ні ax²+bx-c=0</p>
+            <input type="text" id="a" placeholder=" Введіть a" required /><br>            <input type="text" id="b" placeholder=" Введіть b" required /><br>
+            <input type="text" id="c" placeholder=" Введіть c" required /><br>
+            <button id="button" onclick="myFunction()"> розв'язати</button>
+            <div id="JSPractice">
+            <p id="d"></p>
+            <p id="result1"></p>
+            <p id="result2"></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
